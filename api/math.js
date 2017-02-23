@@ -3,7 +3,7 @@ var sum = function (options) {
     /*options.server.seneca.add('role:math,cmd:sum', (msg, reply) => {
         reply(null, { answer: (msg.left + msg.right) })
     })*/
-    options.server.seneca.client({ type: 'tcp', pin: 'role:math,cmd:sum' });
+    options.server.seneca.client({ type: 'tcp', pin: 'role:math,cmd:sum',  port:10002 });
     // Add the route
     options.server.route({
         method: 'POST',

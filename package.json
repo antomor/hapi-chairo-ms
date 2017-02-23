@@ -14,5 +14,10 @@
     "good-console": "^6.4.0",
     "good-squeeze": "^5.0.1",
     "hapi": "^16.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-multi-process": "^1.2.0",
+    "gulp-nodemon": "^2.2.1"
   }
 }

@@ -3,7 +3,7 @@ var user = function (options) {
   /*options.server.seneca.add('role:hello', (msg, reply) => {
         reply(null, { msg: ("hello, " + msg.name) })
     })*/
-  options.server.seneca.client({ type: 'tcp', pin: 'role:user' });
+  options.server.seneca.client({ type: 'tcp', pin: 'role:user',  port:10003 });
     // Add the route
   options.server.route({
     method: 'POST',
