@@ -4,7 +4,8 @@
   "description": "A small example of microservices architecture using hapi and chairo.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/jasmine-node spec",
+    "run": "gulp"
   },
   "author": "Antonio Morrone",
   "license": "ISC",
@@ -16,8 +17,10 @@
     "hapi": "^16.1.0"
   },
   "devDependencies": {
+    "frisby": "^0.8.5",
     "gulp": "^3.9.1",
     "gulp-multi-process": "^1.2.0",
-    "gulp-nodemon": "^2.2.1"
+    "gulp-nodemon": "^2.2.1",
+    "jasmine-node": "^1.14.5"
   }
 }

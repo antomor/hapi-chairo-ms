@@ -7,9 +7,11 @@ var sum = function (options) {
     // Add the route
     options.server.route({
         method: 'POST',
-        path: '/sum',
+        path: '/sum/',
         handler: function (request, reply) {
-            options.server.seneca.act({ role: 'math', cmd: 'sum', left: request.payload.left, right: request.payload.right }, function (err, result) {
+            var left = new Number(request.payload.left);
+            var right = new Number(request.payload.right);
+            options.server.seneca.act({ role: 'math', cmd: 'sum', left: left, right: right }, function (err, result) {
                 if (err) {
                     console.error(err);
                     return reply(err);
